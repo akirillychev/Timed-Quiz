@@ -113,6 +113,7 @@ function buttonHandler(event) {
             initializeQuestion();
             score.textContent= "";
         }, 1000);
+        return score;
     }
     else{
         secondsLeft -= 10;
