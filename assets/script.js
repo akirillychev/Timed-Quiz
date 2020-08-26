@@ -86,21 +86,18 @@ var buttonB = document.body.querySelector("#button-b");
 var buttonC = document.body.querySelector("#button-c");
 var buttonD = document.body.querySelector("#button-d");
 
-//Below is keeping track of what is answered correctly or incorrectly
+//if the answer is correct or incorrect and score
 var score = document.body.querySelector("#score");
-
 var questionIndex = 0;
 var uScore = 0;
 
-//if the answer is correct or incorrect
+
 function buttonHandler(event) {
     
     var button = event.target;
     var userAnswer = button.getAttribute("data-answer");
     var questionId = parseInt(button.getAttribute("data-question"));
-    console.log(button);
-    console.log(userAnswer);
-    console.log(questionId);
+    
     questionList[questionId]["userAnswer"] = userAnswer;
 
 
@@ -113,7 +110,7 @@ function buttonHandler(event) {
             initializeQuestion();
             score.textContent= "";
         }, 1000);
-        return score;
+        
     }
     else{
         secondsLeft -= 10;
@@ -124,8 +121,11 @@ function buttonHandler(event) {
             initializeQuestion();
             score.textContent= ""; 
         }, 1000);
-    }
+    } 
+    return uScore;
+       
 }
+
 
 //buttons
 buttonA.addEventListener("click",buttonHandler);
@@ -138,7 +138,6 @@ function initializeQuestion(){
     console.log(questionList[questionIndex]);
     var wholeObj = questionList[questionIndex];
     var question = wholeObj.question;
-    console.log(question);
     questionTag.textContent = question;
     questionTag.setAttribute("data-question", questionIndex);
 

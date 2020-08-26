@@ -25,3 +25,8 @@ THEN the game is over
 WHEN the game is over
 ```
 
+URL
+1. https://github.com/akirillychev/Timed-Quiz
+2. https://akirillychev.github.io/Timed-Quiz/
+
+
