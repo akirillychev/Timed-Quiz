@@ -1,14 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
+    <title>Accounting Quiz</title>
     <script src="assets/script.js" defer></script>
     <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
-    quiz
+<h1 class="title">Accounting Quiz</h1>
+<h2 class="clock">You have <span id="time">02:00</span> !</h2>
+<body class="bg">
+    <h1 id="question" class="container" data-question=""></h1>
+    <ul class="container">
+        <input type="radio" id="button-a" name="Answer" data-answer="a"></input>
+        <span id="answer-a"></span>
+        <br>
+        <input type="radio" id="button-b" name="Answer" data-answer="b"></input>
+        <span id="answer-b"></span>
+        <br>
+        <input type="radio" id="button-c" name="Answer" data-answer="c"></input>
+        <span id="answer-c"></span>
+        <br>
+        <input type="radio" id="button-d" name="Answer" data-answer="d"></input>
+        <span id="answer-d"></span>
+    </ul>
+
     
+    
+    
+   
+
+    <div class="card-body">
+        <textarea
+          readonly
+          id="score"
+          placeholder="Your score"
+          aria-label="score"
+        ></textarea>
+      </div>
+      <div class="restart"><a href="index.html">Restart Quiz</a></div>
 </body>
+
 </html>
